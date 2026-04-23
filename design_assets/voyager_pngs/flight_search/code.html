@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voyager | Search Flights</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e7e8eb",
+                    "primary-container": "#0056d2",
+                    "outline-variant": "#c3c6d6",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#54f67a",
+                    "surface-bright": "#f8f9fc",
+                    "on-primary-fixed-variant": "#0040a1",
+                    "surface-container": "#eceef0",
+                    "secondary-container": "#fe6f42",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "tertiary-container": "#006e2a",
+                    "background": "#f8f9fc",
+                    "inverse-surface": "#2e3133",
+                    "surface-tint": "#0056d2",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "secondary": "#ac3509",
+                    "tertiary-fixed": "#69ff87",
+                    "on-secondary-fixed-variant": "#852300",
+                    "on-background": "#191c1e",
+                    "on-secondary-container": "#631800",
+                    "primary": "#0040a1",
+                    "tertiary": "#00531e",
+                    "on-secondary-fixed": "#3a0a00",
+                    "on-primary-fixed": "#001847",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-tertiary-fixed": "#002108",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b2c5ff",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#424654",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-variant": "#e1e2e5",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "surface-dim": "#d8dadd",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb59f",
+                    "outline": "#737785",
+                    "surface-container-highest": "#e1e2e5",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#ccd8ff",
+                    "surface": "#f8f9fc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(248, 249, 252, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen">
+<!-- TopAppBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="font-manrope font-black italic text-blue-800 dark:text-blue-300 text-lg tracking-tight">Voyager</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-bold font-manrope text-lg tracking-tight" href="#">Home</a>
+<a class="text-slate-500 dark:text-slate-400 font-manrope text-lg tracking-tight hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-1 rounded-lg" href="#">Search</a>
+<a class="text-slate-500 dark:text-slate-400 font-manrope text-lg tracking-tight hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-1 rounded-lg" href="#">History</a>
+<a class="text-slate-500 dark:text-slate-400 font-manrope text-lg tracking-tight hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-1 rounded-lg" href="#">Offers</a>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary/10">
+<img alt="User Profile" data-alt="Close-up professional portrait of a man with friendly expression against a clean, neutral studio background, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB43d8_Fnh9oh2no4EuBKvbEFkEj3o_54mdVHzem7vbUJYXhLWvsruH3wPnjd2-t_gjycw8aVfiznpuC5qLDTsMxsAy_uCFPRvsUJydOYBJj_iB77ThKPKRWKxKq7jxFiOqiVYecKbVUpPlxOkuzr-lrs4s5Tg8a8sc8NVgUDNxHDqkIerxzBeILcKzLRyhIjCFVBo5tAKwkOX0Td65H3dHKIPNl3zarUE_weGFT-Fn-ykPSPb8LHPWs0i8R6fIjPH6aNRE1Qz0RwP4"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Section Asymmetric Layout -->
+<section class="mb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-7">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-none tracking-tighter mb-4">
+                    The Sky is <br/><span class="text-secondary">Calling You.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md">
+                    Experience seamless travel planning with our digital concierge service. Your journey begins with a single search.
+                </p>
+</div>
+<div class="lg:col-span-5 hidden lg:block h-64 rounded-3xl overflow-hidden relative">
+<img alt="Aircraft wing" class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic shot of a commercial airplane wing soaring through a sea of golden clouds at sunset with soft atmospheric perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCms14aKWuw75b7X2KlcI16esGd3DuhuKxP9yAt45AOz2vRs7FhAuS7ydbi2MCukuF_LPV_KTUP2reF8U5fcsHXy-daUvoaUM_vtW7wphalNYN93aAtId8S_PYDGrMG_yfODZLjNKKyLIVkbBud-X-VQsD4iCiHApO9cOlsdKr8xfW8MqmEQvxpHShmCO_Kf2cYdssaZz9b0IAbu3AYEbZiC4BZtddOuAf_J2xsYjCnWNN__JRGydJRAlW7GJs4huaZpv_Be8spv_Ln"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</section>
+<!-- Search Form Module -->
+<div class="bg-surface-container-low rounded-[2rem] p-6 md:p-10 relative overflow-hidden">
+<!-- Decorative atmospheric gradient -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+<form class="relative z-10 space-y-8">
+<!-- Trip Type Toggles (Architectural Chips) -->
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 bg-primary text-on-primary font-semibold rounded-xl transition-all" type="button">
+                        Round-trip
+                    </button>
+<button class="px-6 py-3 bg-surface-container-high text-on-surface-variant font-semibold rounded-xl hover:bg-surface-container-highest transition-all" type="button">
+                        One-way
+                    </button>
+<button class="px-6 py-3 bg-surface-container-high text-on-surface-variant font-semibold rounded-xl hover:bg-surface-container-highest transition-all" type="button">
+                        Multi-city
+                    </button>
+</div>
+<!-- Main Search Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Source -->
+<div class="group">
+<label class="block font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">From</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest h-16 px-5 rounded-2xl transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-primary-container">flight_takeoff</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface font-semibold placeholder:text-outline/50" placeholder="Departure City" type="text" value="New York (JFK)"/>
+</div>
+</div>
+<!-- Destination -->
+<div class="group">
+<label class="block font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">To</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest h-16 px-5 rounded-2xl transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-secondary">flight_land</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface font-semibold placeholder:text-outline/50" placeholder="Arrival City" type="text" value="London (LHR)"/>
+</div>
+</div>
+<!-- Departure Date -->
+<div class="group">
+<label class="block font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Departure</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest h-16 px-5 rounded-2xl transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-primary-fixed-dim">calendar_today</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface font-semibold" type="text" value="Oct 24, 2024"/>
+</div>
+</div>
+<!-- Return Date -->
+<div class="group">
+<label class="block font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Return (Optional)</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest h-16 px-5 rounded-2xl transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-primary-fixed-dim">calendar_month</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface font-semibold placeholder:text-outline/50" placeholder="Add Date" type="text"/>
+</div>
+</div>
+</div>
+<!-- Secondary Search Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t border-outline-variant/15 pt-8">
+<!-- Passengers Bento Block -->
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="flex-1 bg-surface-container-highest/50 p-4 rounded-2xl flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Adults</p>
+<p class="text-lg font-bold">01</p>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-highest/50 p-4 rounded-2xl flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Children</p>
+<p class="text-lg font-bold">00</p>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Search CTA -->
+<button class="w-full bg-gradient-to-r from-primary to-primary-container h-16 rounded-2xl text-on-primary font-manrope font-extrabold text-lg tracking-tight flex items-center justify-center gap-3 shadow-[0_12px_24px_rgba(0,64,161,0.2)] active:scale-[0.98] transition-all">
+<span>Search Flights</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Featured Destinations Bento -->
+<section class="mt-20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline text-3xl font-bold text-on-surface">Curated Escapes</h2>
+<p class="text-on-surface-variant">Recommended based on your search history</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    View all <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-2 group relative h-[300px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="Sydney Opera House" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Aerial view of Sydney Opera House and harbor at sunrise with soft golden light and clear blue water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkIbexNhkeWQrsevLExQewNoR2yOcI1bZ9bFP6Ajq2SZdCV5Z5ujDh0wVB0XJV61lMAEelchxY0urIzWUAl_KawxAGbcJ3N_MyqgzLDLkQl6trxS7LfcG3EM6msvmU24OkS3iz4E4gdXRQb2qr8Sxk2mAimfEui1-pzatEnxpWUKRNrbhVvP_hNrLID-WrKN6iQQRKJQ6tv0NMwFGGS7d9G0XZKsCVUkgXmXWODw_zRwRs0rCSG3O640axr0NimEwhfJcB7haV3XFN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-on-primary">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-3 inline-block">Best Value</span>
+<h3 class="text-2xl font-bold font-headline">Sydney, Australia</h3>
+<p class="text-sm opacity-80">Direct flights from $899</p>
+</div>
+</div>
+<!-- Small Card -->
+<div class="group relative h-[300px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="Iceland Northern Lights" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stunning green aurora borealis dancing over a snowy Icelandic mountain landscape with a frozen lake reflecting the lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMySTVTKGqu5J97DdcCUhhnw3PGASxP5uAkVwBtBk0XGoyTtXUZikUYF3mazV8AzpoKkPha6EOvbdWu5O1jboU9Sm_XvvL1zRev_q-9D_MwHvelqEsWoGc81clci5IewkNW8Op3n1V_mNlaFPhJkRaE7AoNVJDV6mBq5aqY7H2fWVbSJ3eYs-wAQ8CuTaVKsiPvYNOZAuxy2ceXjNdsK94D43TpSEIFk0832BvTTWXQAE7TkO9chmTMlsRjCVI8MPhFiA1vaAco2zR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-on-primary">
+<h3 class="text-xl font-bold font-headline text-on-primary">Reykjavik</h3>
+<p class="text-sm opacity-80">Seasonal Adventure</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 w-full z-50 rounded-t-3xl bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] h-20 flex justify-around items-center px-4 pb-safe-offset-4">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">search</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">history</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Offers</span>
+</button>
+</footer>
+</body></html>

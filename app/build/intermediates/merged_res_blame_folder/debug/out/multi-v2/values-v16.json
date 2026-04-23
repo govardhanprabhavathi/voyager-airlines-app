@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.voyager.airlines.app-mergeDebugResources-55:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Govardhan\\.gradle\\caches\\transforms-3\\a6d09590cac316733e850a58af9e4a68\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

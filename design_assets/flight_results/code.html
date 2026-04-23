@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voyager - Flight Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e7e8eb",
+                        "primary-container": "#0056d2",
+                        "outline-variant": "#c3c6d6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#54f67a",
+                        "surface-bright": "#f8f9fc",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#fe6f42",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "tertiary-container": "#006e2a",
+                        "background": "#f8f9fc",
+                        "inverse-surface": "#2e3133",
+                        "surface-tint": "#0056d2",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "secondary": "#ac3509",
+                        "tertiary-fixed": "#69ff87",
+                        "on-secondary-fixed-variant": "#852300",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#631800",
+                        "primary": "#0040a1",
+                        "tertiary": "#00531e",
+                        "on-secondary-fixed": "#3a0a00",
+                        "on-primary-fixed": "#001847",
+                        "secondary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#002108",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b2c5ff",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424654",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-variant": "#e1e2e5",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb59f",
+                        "outline": "#737785",
+                        "surface-container-highest": "#e1e2e5",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#ccd8ff",
+                        "surface": "#f8f9fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-blue-700">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="font-manrope font-black italic text-blue-800 text-lg tracking-tight">Voyager</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-blue-700 font-bold font-manrope" href="#">Home</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors font-manrope" href="#">Search</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors font-manrope" href="#">History</a>
+</nav>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/10">
+<img alt="User Profile" data-alt="professional male portrait for user profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL0q00vLoF2YK1Zhft4cr9_BVMtiCrmsmKOoJOgG73ndT473z6ZrgXw55jaWGmlrLOKoPNy80JOb9AtDAA7rzza7Yb25BaPzjGYj7_5IsSNem9I-61OplwJbvwlyXVoSOSvcS_IQ-vwdh6KhY42MvNm1Nj8hVUPaP26HGtVcRvHWiKGsKQPykMu6c6kwUeU9IpbRxXQ1vOjy-NbFGx0o-TgWZuSKkRCykvaBInLkA6JcbFW3thQxgeu00rsuy7PqbphOdUTGQTbJh6"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-5xl mx-auto">
+<!-- Search Header Info -->
+<section class="mb-8 px-2">
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-1">Select Departure</p>
+<h1 class="text-3xl font-extrabold tracking-tight text-primary">London to New York</h1>
+<p class="text-on-surface-variant font-medium mt-1">Oct 24 • 1 Adult • Economy</p>
+</section>
+<!-- Editorial Filter Tabs -->
+<div class="flex gap-2 mb-8 overflow-x-auto pb-2 scrollbar-hide">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold flex flex-col items-start min-w-[120px] transition-all">
+<span class="text-xs uppercase tracking-tighter opacity-80">Cheapest</span>
+<span class="text-lg">$432</span>
+</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-xl font-bold flex flex-col items-start min-w-[120px] hover:bg-surface-container-highest transition-all">
+<span class="text-xs uppercase tracking-tighter opacity-70">Fastest</span>
+<span class="text-lg">7h 20m</span>
+</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-xl font-bold flex flex-col items-start min-w-[120px] hover:bg-surface-container-highest transition-all">
+<span class="text-xs uppercase tracking-tighter opacity-70">Best</span>
+<span class="text-lg">Recommended</span>
+</button>
+</div>
+<!-- Flight Results List -->
+<div class="space-y-6">
+<!-- Flight Card 1: Featured/Cheapest -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden transition-all hover:shadow-xl hover:shadow-primary/5 group relative">
+<!-- Highlight Badge -->
+<div class="absolute top-0 right-0 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-bl-xl font-bold text-xs uppercase tracking-widest">
+                    Best Value
+                </div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
+<!-- Airline Info -->
+<div class="flex items-center gap-4 min-w-[140px]">
+<div class="w-12 h-12 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+<img alt="Airline" class="w-full h-full object-contain" data-alt="minimalist commercial airline logo in blue and silver colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnX1tfjRIqWjLJSgJB4ztsjZI0TqoreHfeEJ3PqT0BuzwxQDt2zO8hTS2iUXOzRMCiawgnMcrAVi7mxh5yH0JPeHrWbqAdLy4wY93bD4AAcg11a7G7efTKb9ZNuScEyYmcJZ3fwqbYbjcd1nhHIwn8YXoeLkmqZ4teQvbAnWvpyFcFPH9vQqDbxMnTWEoHxOm6uYt7Hr69JyeUGUfqjqZDVv46DXBpy6UG_aLIGIicj0Nu2vq4ldZyR6smCRXMdotp0zVf2plUXUbs"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">SkyLink Air</p>
+<p class="text-xs text-on-surface-variant">SL-402 • Boeing 787</p>
+</div>
+</div>
+<!-- Journey Info -->
+<div class="flex-1 flex items-center justify-between gap-4 max-w-md">
+<div class="text-center">
+<p class="text-2xl font-black text-primary">08:45</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">LHR</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-4">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant mb-1 tracking-widest">7h 55m • Non-stop</span>
+<div class="w-full h-[2px] bg-outline-variant relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary absolute text-lg bg-surface-container-lowest px-1" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-primary">11:40</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">JFK</p>
+</div>
+</div>
+<!-- Price & Action -->
+<div class="flex items-center md:flex-col md:items-end justify-between gap-4 border-t md:border-t-0 pt-4 md:pt-0 border-surface-container-high">
+<div class="text-right">
+<p class="text-sm text-on-surface-variant line-through opacity-60">$510</p>
+<p class="text-3xl font-black text-on-surface tracking-tighter">$432</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-xl font-bold active:scale-95 transition-all shadow-lg shadow-primary/20">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+<!-- Flight Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden transition-all hover:shadow-xl hover:shadow-primary/5 group">
+<div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="flex items-center gap-4 min-w-[140px]">
+<div class="w-12 h-12 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+<img alt="Airline" class="w-full h-full object-contain" data-alt="stylized vector airline logo with orange and white accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSLZx1CSyG59SyibEV0Mjquac2jdPijgyAv8ArMiw7HK07q1-zM5XURpDdhsEjBZlOSJ0wLTdaHtgSVrWhmMpTZK1Jl1Jzv2AAhpGp1XKW7V9iVz9qv6CdIEn1kEufayXNUkEcgsi-pgUeNEOyp0BtOcO2npnTCU7_3LMKoL9qp8z1L6023uTOfl7-QigWP5XuyoWR9adCpdCmKBiRhSeaHPepzOjw_kxyAUlFASVe72tfdz6FM0y01jE89pOhoChD-Xomjka07vot"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Global Reach</p>
+<p class="text-xs text-on-surface-variant">GR-118 • Airbus A350</p>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-between gap-4 max-w-md">
+<div class="text-center">
+<p class="text-2xl font-black text-on-surface-variant">13:20</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">LHR</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-4">
+<span class="text-[10px] font-bold uppercase text-secondary mb-1 tracking-widest">10h 15m • 1 Stop</span>
+<div class="w-full h-[2px] bg-outline-variant relative flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-outline-variant rounded-full"></div>
+<span class="material-symbols-outlined text-outline absolute text-lg bg-surface-container-lowest px-1" data-icon="flight">flight</span>
+</div>
+<span class="text-[9px] font-medium text-on-surface-variant mt-1">Layover in DUB</span>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-on-surface-variant">18:35</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">JFK</p>
+</div>
+</div>
+<div class="flex items-center md:flex-col md:items-end justify-between gap-4 border-t md:border-t-0 pt-4 md:pt-0 border-surface-container-high">
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$485</p>
+</div>
+<button class="bg-surface-container-high text-primary px-8 py-3 rounded-xl font-bold active:scale-95 transition-all hover:bg-surface-container-highest">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+<!-- Flight Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden transition-all hover:shadow-xl hover:shadow-primary/5 group">
+<div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="flex items-center gap-4 min-w-[140px]">
+<div class="w-12 h-12 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+<img alt="Airline" class="w-full h-full object-contain" data-alt="abstract geometric logo for premium boutique airline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBuY48f3eDKImoCCyepC9ifNaKfIGAd_41a6tMxyrg0lLZoVjgxhUSZ1gQ8GvBxPDyJNNHCi3CxjSeIIlBAwGK4OuwWbUGp1YfAQshYxdOw1uV6iFIy-3dyuUE5wbHam0CH-Qtz01CaMxQbU71_DQ-JkAOi1MDBCc2dEQkdORPyFaS_6uG8uwi9r3PO2NWWyJCdZMdS5avUXSzPvvsLvG4dje8owzFgklWvXmAYqoxLnGAeBTUcpKo3cxkq5Ug8MouTUMZ1Luj5NBT"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Vanguard Jet</p>
+<p class="text-xs text-on-surface-variant">VJ-99 • Boeing 777X</p>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-between gap-4 max-w-md">
+<div class="text-center">
+<p class="text-2xl font-black text-on-surface-variant">20:00</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">LHR</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-4">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant mb-1 tracking-widest">7h 20m • Non-stop</span>
+<div class="w-full h-[2px] bg-outline-variant relative flex items-center justify-center">
+<span class="material-symbols-outlined text-outline absolute text-lg bg-surface-container-lowest px-1" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-on-surface-variant">22:20</p>
+<p class="text-sm font-bold text-on-surface-variant tracking-wider">JFK</p>
+</div>
+</div>
+<div class="flex items-center md:flex-col md:items-end justify-between gap-4 border-t md:border-t-0 pt-4 md:pt-0 border-surface-container-high">
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$620</p>
+</div>
+<button class="bg-surface-container-high text-primary px-8 py-3 rounded-xl font-bold active:scale-95 transition-all hover:bg-surface-container-highest">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl rounded-t-3xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-4 pb-safe-offset-4 h-20">
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-2">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="local_offer">local_offer</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Offers</span>
+</div>
+</nav>
+</body></html>

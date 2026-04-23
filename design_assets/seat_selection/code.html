@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seat Selection - Voyager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#424654",
+                        "primary": "#0040a1",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-surface": "#191c1e",
+                        "tertiary": "#00531e",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#fe6f42",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e7e8eb",
+                        "inverse-primary": "#b2c5ff",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "on-background": "#191c1e",
+                        "background": "#f8f9fc",
+                        "surface-tint": "#0056d2",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container": "#eceef0",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#dae2ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-secondary": "#ffffff",
+                        "outline": "#737785",
+                        "surface-container-highest": "#e1e2e5",
+                        "surface": "#f8f9fc",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary-fixed": "#002108",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffdbd0",
+                        "on-secondary-fixed-variant": "#852300",
+                        "tertiary-container": "#006e2a",
+                        "on-error-container": "#93000a",
+                        "secondary": "#ac3509",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#54f67a",
+                        "on-secondary-container": "#631800",
+                        "inverse-surface": "#2e3133",
+                        "secondary-fixed-dim": "#ffb59f",
+                        "surface-variant": "#e1e2e5",
+                        "surface-bright": "#f8f9fc",
+                        "on-secondary-fixed": "#3a0a00",
+                        "primary-container": "#0056d2",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary-fixed": "#001847",
+                        "on-primary-container": "#ccd8ff"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .seat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 2rem repeat(3, 1fr);
+        }
+        .cabin-curve-top {
+            border-top-left-radius: 120px;
+            border-top-right-radius: 120px;
+        }
+        .cabin-curve-bottom {
+            border-bottom-left-radius: 120px;
+            border-bottom-right-radius: 120px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-48">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-blue-700 active:scale-95 transition-transform duration-200">arrow_back</button>
+<h1 class="font-manrope font-black italic text-blue-800 dark:text-blue-300 text-lg tracking-tight">Voyager</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-manrope font-bold text-lg tracking-tight text-blue-700 dark:text-blue-400">Seat Selection</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1eBY01PxA5vBjotg1vpQ_xfVuE7A2iMJZjHdZPTeuNN89CKSM75rZU1Xafz2_jdXaWcXvq_TSyk724y1nYF4-4_07T_uDSp8BLD_8tFw_HF2IdsbDWH3JuM-PFxhyB9Xd8VGlXFvo8NT8KUmEsI81k-dz1EAxOdJ_zVKNJlhkvNSpEToJ_RwCPeouopUu-Wn0URvil0d3B5ERlqu1OlrDGqHE7oGU8q3TZTVfn5W-UUYX3mHUFugcNRT_CuZ9ZPzFX4Pz4DIT36dG"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-4 max-w-2xl mx-auto">
+<!-- Flight Info Header -->
+<section class="mb-8">
+<div class="flex items-center justify-between bg-surface-container-low p-6 rounded-xl">
+<div>
+<p class="font-label text-[10px] font-semibold tracking-wide uppercase text-on-surface-variant mb-1">Flight</p>
+<h2 class="font-display font-bold text-xl text-primary">VY-204</h2>
+</div>
+<div class="text-right">
+<p class="font-label text-[10px] font-semibold tracking-wide uppercase text-on-surface-variant mb-1">Route</p>
+<h2 class="font-display font-bold text-xl text-primary">SFO → LHR</h2>
+</div>
+</div>
+</section>
+<!-- Seat Legend -->
+<section class="flex justify-around mb-10 py-4 bg-surface-container-lowest rounded-xl border border-outline-variant/10 shadow-sm">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest border border-outline-variant/30"></div>
+<span class="font-label text-[10px] font-semibold text-on-surface-variant">Available</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary border border-primary"></div>
+<span class="font-label text-[10px] font-semibold text-on-surface-variant">Selected</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-dim relative flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-surface-variant/40">close</span>
+</div>
+<span class="font-label text-[10px] font-semibold text-on-surface-variant">Occupied</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed border border-tertiary-fixed"></div>
+<span class="font-label text-[10px] font-semibold text-on-surface-variant">Extra Legroom</span>
+</div>
+</section>
+<!-- Aircraft Cabin Visualizer -->
+<section class="relative bg-surface-container-low cabin-curve-top cabin-curve-bottom pt-20 pb-40 px-6 overflow-hidden shadow-inner border-x border-outline-variant/10">
+<!-- Cockpit Area Graphic -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-14 bg-surface-container-highest rounded-b-full"></div>
+<!-- Cabin Sections -->
+<div class="flex flex-col gap-12 relative z-10">
+<!-- Business Section (Rows 1-5) -->
+<div>
+<div class="flex items-center justify-center mb-6">
+<span class="font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant bg-surface-container px-4 py-1 rounded-full">Business Class</span>
+</div>
+<div class="grid grid-cols-4 gap-4 px-8">
+<!-- Rows 1 to 5 -->
+<script>
+                            for(let r=1; r<=5; r++) {
+                                ['A','B','C','D'].forEach(l => {
+                                    const isOccupied = Math.random() > 0.7;
+                                    const classes = isOccupied ? 'bg-surface-dim text-on-surface-variant/30' : 'bg-surface-container-lowest border border-outline-variant/30 text-primary active:scale-90';
+                                    const content = isOccupied ? `${r}${l}` : `${r}${l}`;
+                                    document.write(`<div class="w-full aspect-square rounded-xl flex items-center justify-center transition-transform ${classes}"><span class="font-label text-xs font-bold">${content}</span></div>`);
+                                });
+                            }
+                        </script>
+</div>
+</div>
+<!-- Premium Economy Section (Rows 6-12) -->
+<div>
+<div class="flex items-center justify-center mb-6">
+<span class="font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant bg-surface-container px-4 py-1 rounded-full">Premium Economy</span>
+</div>
+<div class="seat-grid gap-3">
+<script>
+                            for(let r=6; r<=12; r++) {
+                                ['A','B','C'].forEach(l => {
+                                    const isOccupied = Math.random() > 0.7;
+                                    const classes = isOccupied ? 'bg-surface-dim' : 'bg-tertiary-fixed border border-tertiary-fixed active:scale-90';
+                                    const textColor = isOccupied ? 'text-on-surface-variant/30' : 'text-on-tertiary-fixed';
+                                    document.write(`<div class="aspect-square rounded-lg flex items-center justify-center transition-transform ${classes}"><span class="font-label text-[10px] font-bold ${textColor}">${r}${l}</span></div>`);
+                                });
+                                document.write(`<div class="w-8 flex items-center justify-center font-label text-[10px] font-bold text-outline-variant">${r}</div>`);
+                                ['D','E','F'].forEach(l => {
+                                    const isOccupied = Math.random() > 0.7;
+                                    const classes = isOccupied ? 'bg-surface-dim' : 'bg-tertiary-fixed border border-tertiary-fixed active:scale-90';
+                                    const textColor = isOccupied ? 'text-on-surface-variant/30' : 'text-on-tertiary-fixed';
+                                    document.write(`<div class="aspect-square rounded-lg flex items-center justify-center transition-transform ${classes}"><span class="font-label text-[10px] font-bold ${textColor}">${r}${l}</span></div>`);
+                                });
+                            }
+                        </script>
+</div>
+</div>
+<!-- Economy Section (Rows 14-35) -->
+<div>
+<div class="flex items-center justify-center mb-6">
+<span class="font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant bg-surface-container px-4 py-1 rounded-full">Economy Class</span>
+</div>
+<div class="seat-grid gap-3">
+<script>
+                            for(let r=14; r<=35; r++) {
+                                ['A','B','C'].forEach(l => {
+                                    const isSelected = (r === 14 && l === 'A');
+                                    const isOccupied = !isSelected && Math.random() > 0.6;
+                                    let classes = "bg-surface-container-lowest border border-outline-variant/30 text-primary active:scale-90";
+                                    if(isSelected) classes = "bg-primary text-on-primary shadow-lg ring-4 ring-primary/20 scale-110 z-10";
+                                    else if(isOccupied) classes = "bg-surface-dim text-on-surface-variant/30";
+                                    
+                                    document.write(`<div class="aspect-square rounded-lg flex items-center justify-center transition-transform ${classes}"><span class="font-label text-[10px] font-bold">${r}${l}</span></div>`);
+                                });
+                                document.write(`<div class="w-8 flex items-center justify-center font-label text-[10px] font-bold text-outline-variant">${r}</div>`);
+                                ['D','E','F'].forEach(l => {
+                                    const isOccupied = Math.random() > 0.6;
+                                    const classes = isOccupied ? 'bg-surface-dim text-on-surface-variant/30' : 'bg-surface-container-lowest border border-outline-variant/30 text-primary active:scale-90';
+                                    document.write(`<div class="aspect-square rounded-lg flex items-center justify-center transition-transform ${classes}"><span class="font-label text-[10px] font-bold">${r}${l}</span></div>`);
+                                });
+                            }
+                        </script>
+</div>
+</div>
+</div>
+<!-- Wing Visualizer Overlays -->
+<div class="absolute top-[25%] -left-40 w-56 h-[30%] bg-surface-container-highest/20 -skew-y-12 rounded-r-3xl pointer-events-none"></div>
+<div class="absolute top-[25%] -right-40 w-56 h-[30%] bg-surface-container-highest/20 skew-y-12 rounded-l-3xl pointer-events-none"></div>
+<!-- Tail Graphic -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-20 bg-surface-container-highest rounded-t-[100px]"></div>
+</section>
+</main>
+<!-- Floating Summary Bar -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-lg z-50">
+<div class="bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-2xl p-5 rounded-[2.5rem] shadow-2xl border border-white/20 flex items-center justify-between">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">event_seat</span>
+</div>
+<div>
+<p class="font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Selected Seat</p>
+<div class="flex items-center gap-2">
+<span class="font-display font-black text-2xl text-primary">14A</span>
+<span class="text-outline-variant">•</span>
+<span class="font-display font-bold text-lg text-secondary">$25.00</span>
+</div>
+</div>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-manrope font-extrabold px-8 py-4 rounded-3xl shadow-lg active:scale-95 transition-all duration-200">
+                Confirm
+            </button>
+</div>
+</div>
+</body></html>

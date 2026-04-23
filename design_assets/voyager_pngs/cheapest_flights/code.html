@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voyager | Cheapest Flights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e7e8eb",
+                        "primary-container": "#0056d2",
+                        "outline-variant": "#c3c6d6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#54f67a",
+                        "surface-bright": "#f8f9fc",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#fe6f42",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "tertiary-container": "#006e2a",
+                        "background": "#f8f9fc",
+                        "inverse-surface": "#2e3133",
+                        "surface-tint": "#0056d2",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "secondary": "#ac3509",
+                        "tertiary-fixed": "#69ff87",
+                        "on-secondary-fixed-variant": "#852300",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#631800",
+                        "primary": "#0040a1",
+                        "tertiary": "#00531e",
+                        "on-secondary-fixed": "#3a0a00",
+                        "on-primary-fixed": "#001847",
+                        "secondary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#002108",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b2c5ff",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424654",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-variant": "#e1e2e5",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb59f",
+                        "outline": "#737785",
+                        "surface-container-highest": "#e1e2e5",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#ccd8ff",
+                        "surface": "#f8f9fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-black italic text-blue-800 dark:text-blue-300 text-lg tracking-tight">Voyager</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-manrope font-bold text-lg tracking-tight text-blue-700 dark:text-blue-400 hidden md:block">Offers</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden ring-2 ring-primary/10">
+<img alt="User Profile" data-alt="close-up portrait of a professional man in a blue shirt with a friendly expression and clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMO-VkFsepfW-eiNPNcNQW3fqqJnJm2L9yDup-aZfTa4itntr1-e8TYbWIQd5xLnluBI9UidnkSaO8A-5KZ5KE9-zc7GIDqyNTvP6A82KoNEgaKPdvus4ZBB9TC59KR-bmeZ7Po19E87stlrCH8aiRzcle5vIrST06l6-MBH80fH2s9lyyq1u4xI5c1tvO3G1n5E-85fy3xK3lVWFxTVYnWQoh7xjcR2uinRqIJeEhCIF9xuytjq5PTtqKhIugLgqR25hoMUCD76rf"/>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-28 px-4 md:px-8 max-w-7xl mx-auto space-y-8">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="relative overflow-hidden rounded-[2rem] bg-primary h-[300px] flex items-end p-8 md:p-12">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="wide angle view of a commercial airplane soaring above a sea of white clouds during high altitude flight at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJaZ0wheHlrlN_HJm8MxmEqtTcEvI2jG0Sh4n3OWTSWnhOCPKYgi1vyygKDrCit4sGax-gt7Ts2lDwZkzBXCHHCtB9pxmU1ApDxGn1OFxF1dtMnmozUk1H6SXrAiZmSWBAIuBswGZfndpPHFHwxOGqxPStYcOnFlmxef0LY1yxOQ1_Ls1z3JLT0M8BtWb1vameAofU9_VOcdcMlJCxXRGnv-SijpdvjBnphre6uzp4vAzxxSO1VpwgLKtiXcDys1KhVxt895r63WNo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full md:w-2/3">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg font-label text-xs font-bold uppercase tracking-widest mb-4 inline-block">Off-Peak Specials</span>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-white leading-tight">Travel more,<br/>spend less.</h2>
+<p class="text-on-primary-container font-body mt-4 max-w-md opacity-90">Unlock exclusive low-demand pricing and seasonal deals tailored for the modern voyager.</p>
+</div>
+</section>
+<!-- Search and Trends Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Filter & Trend Sidebar -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-6 rounded-3xl space-y-6">
+<h3 class="font-headline font-bold text-xl text-on-surface">Price Trends</h3>
+<!-- Simple Trend Chart (CSS based) -->
+<div class="h-32 flex items-end gap-2 px-2">
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[60%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[85%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-tertiary-fixed rounded-t-lg h-[30%] transition-all relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Lowest Now</div>
+</div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[70%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[95%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[50%] transition-all hover:bg-primary/20"></div>
+</div>
+<div class="flex justify-between text-[10px] font-label text-outline uppercase tracking-tighter">
+<span>Sep</span><span>Oct</span><span class="text-tertiary font-bold">Nov</span><span>Dec</span><span>Jan</span><span>Feb</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Prices are currently <span class="text-tertiary font-bold">32% lower</span> than the seasonal average due to low demand in November.
+                    </p>
+<button class="w-full py-4 bg-surface-container-lowest rounded-2xl font-headline font-bold text-primary flex items-center justify-center gap-2 transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+                        Track Prices
+                    </button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<h3 class="font-headline font-bold text-lg mb-4">Quick Filters</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary text-on-primary px-4 py-2 rounded-xl text-sm font-medium">Cheapest</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-4 py-2 rounded-xl text-sm font-medium">Non-stop</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-4 py-2 rounded-xl text-sm font-medium">Flexible</span>
+</div>
+</div>
+</aside>
+<!-- Flight Results -->
+<section class="lg:col-span-8 space-y-4">
+<!-- Deal Card 1 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-tertiary-fixed"></div>
+<div class="w-full md:w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="serene tropical beach with white sand and turquoise water under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAslCP6B753H6ITFYrhgYeSxnLwoT_b70DvKyU_2qOKbSuqnDMHy6b3ngb65UMVsStPZOt7rfPIyrUvru8drSEel_GB3xB-Lh4izYcKsZA4351iaS-HFHyhx0_ESsOzp5z5bz2xpWh3X0-efmnEZLPtstoDfW4v0_GuQO9T2GNi-gGQNliti8ocwCTNCtdgKMqzGxxA9DRh83oNu2MKq-aJoAD3ku5OI0mNF1WCFVgXcLoLP9mAphTSIzZ2nxmrDtcmryRYlpiht1D8"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
+<div class="space-y-1">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Departure</span>
+<div class="text-2xl font-headline font-extrabold">LHR</div>
+<div class="text-sm text-on-surface-variant">London, 08:45</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="text-[10px] text-tertiary font-bold uppercase tracking-widest">11h 20m</span>
+<div class="w-full h-px bg-surface-container-high relative">
+<span class="material-symbols-outlined absolute left-1/2 -translate-x-1/2 -top-3 bg-surface-container-lowest px-1 text-primary text-lg" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<span class="text-[10px] text-outline font-label uppercase">Direct</span>
+</div>
+<div class="space-y-1 text-right">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Arrival</span>
+<div class="text-2xl font-headline font-extrabold">MLE</div>
+<div class="text-sm text-on-surface-variant">Malé, 22:05</div>
+</div>
+</div>
+<div class="w-full md:w-40 flex flex-col items-center md:items-end gap-2 border-t md:border-t-0 md:border-l border-surface-container pt-4 md:pt-0 md:pl-6">
+<div class="bg-tertiary-container/10 text-tertiary text-[10px] font-bold px-2 py-1 rounded-lg">SAVE 45%</div>
+<div class="text-3xl font-headline font-black text-tertiary">$420</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-3 rounded-xl transition-all active:scale-95 shadow-md shadow-primary/20">Book Now</button>
+</div>
+</div>
+<!-- Deal Card 2 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] relative overflow-hidden">
+<div class="w-full md:w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="cinematic view of traditional japanese pagoda and cherry blossoms at sunset in Kyoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKnTSNXXqYTEXfc7qU6dR8218NfJ3zo7N30OI9_K0fecI01hx5Ek9d4EkoI1o0MyhAlr_vkARBvZ3tw4SblxBlV1-4wnsSe770EYoj8V8D4x0PjTEDRpxflyVkLCcZK1t4dX4STyduYAdYOVTXtvCMERz-9SLi9fTZZlGP6yOHQ80Fyrm6gQiX7ZHFy42Qg3HF1t89NAc_b7ZqJDMpvF6NnYtOv6NsJqgCX1R_LlxBwRkj0xNw0HX6BoZZeo1YxCXpBgN_qaTV07CY"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
+<div class="space-y-1">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Departure</span>
+<div class="text-2xl font-headline font-extrabold">JFK</div>
+<div class="text-sm text-on-surface-variant">New York, 14:10</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="text-[10px] text-tertiary font-bold uppercase tracking-widest">14h 45m</span>
+<div class="w-full h-px bg-surface-container-high relative">
+<span class="material-symbols-outlined absolute left-1/2 -translate-x-1/2 -top-3 bg-surface-container-lowest px-1 text-primary text-lg" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<span class="text-[10px] text-outline font-label uppercase">1 Stop (HND)</span>
+</div>
+<div class="space-y-1 text-right">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Arrival</span>
+<div class="text-2xl font-headline font-extrabold">NRT</div>
+<div class="text-sm text-on-surface-variant">Tokyo, 18:55</div>
+</div>
+</div>
+<div class="w-full md:w-40 flex flex-col items-center md:items-end gap-2 border-t md:border-t-0 md:border-l border-surface-container pt-4 md:pt-0 md:pl-6">
+<div class="bg-tertiary-container/10 text-tertiary text-[10px] font-bold px-2 py-1 rounded-lg">SAVE 30%</div>
+<div class="text-3xl font-headline font-black text-tertiary">$680</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-3 rounded-xl transition-all active:scale-95 shadow-md shadow-primary/20">Book Now</button>
+</div>
+</div>
+<!-- Deal Card 3 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] relative overflow-hidden">
+<div class="w-full md:w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="luxury infinity pool overlooking the mediterranean sea at dusk with purple and orange skies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq7Uz-z4XFiDHxJdJsJxNsbM0ZLCPTFAe-b5T7pzh50nfbnx88HHqV4Y_a7J-AucrpLSeGn_dts7YnqMF-kk2UlZeu5FDelGrAqY000a7EE_K9NL59Pd4lU3RGVMQisvDAGmZLX85pjvTG5F6iu_qbi5D238Pp2BK7OKtuIESoa57lJCcqVnV6q61tC6z41Oq2uwzbbJtKVLgjatU-sZa8Gl4WFaymssmk48gnmVbJg1ViBVg_LSi-dZeTFw9H1Fg4qT29AD8Q_lp1"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
+<div class="space-y-1">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Departure</span>
+<div class="text-2xl font-headline font-extrabold">CDG</div>
+<div class="text-sm text-on-surface-variant">Paris, 10:20</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="text-[10px] text-tertiary font-bold uppercase tracking-widest">2h 15m</span>
+<div class="w-full h-px bg-surface-container-high relative">
+<span class="material-symbols-outlined absolute left-1/2 -translate-x-1/2 -top-3 bg-surface-container-lowest px-1 text-primary text-lg" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<span class="text-[10px] text-outline font-label uppercase">Direct</span>
+</div>
+<div class="space-y-1 text-right">
+<span class="text-[10px] text-outline font-label uppercase tracking-widest">Arrival</span>
+<div class="text-2xl font-headline font-extrabold">BCN</div>
+<div class="text-sm text-on-surface-variant">Barcelona, 12:35</div>
+</div>
+</div>
+<div class="w-full md:w-40 flex flex-col items-center md:items-end gap-2 border-t md:border-t-0 md:border-l border-surface-container pt-4 md:pt-0 md:pl-6">
+<div class="bg-tertiary-container/10 text-tertiary text-[10px] font-bold px-2 py-1 rounded-lg">SAVE 55%</div>
+<div class="text-3xl font-headline font-black text-tertiary">$45</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-3 rounded-xl transition-all active:scale-95 shadow-md shadow-primary/20">Book Now</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Bento Grid: Why Book Now? -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-[2rem] flex flex-col justify-between">
+<div>
+<h4 class="font-headline text-2xl font-bold mb-4">Smart Booking Insights</h4>
+<p class="text-on-surface-variant leading-relaxed max-w-md">Our algorithms analyze billions of data points to find the exact moment when demand is lowest. Travelers who book today for November flights are saving an average of $240 per ticket.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex-1 border border-primary/5">
+<div class="text-primary font-black text-xl">#1 Value</div>
+<div class="text-xs font-label text-outline uppercase mt-1">Market Rating</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex-1 border border-primary/5">
+<div class="text-tertiary font-black text-xl">100% Secure</div>
+<div class="text-xs font-label text-outline uppercase mt-1">Guarantee</div>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-8 rounded-[2rem] flex flex-col items-center justify-center text-center space-y-4">
+<span class="material-symbols-outlined text-6xl" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h4 class="font-headline text-2xl font-extrabold">Flash Sale</h4>
+<p class="text-sm opacity-90">Last minute seats to Madrid starting at $19. Ends in 04:22:15.</p>
+<button class="bg-on-secondary-container text-secondary-container px-6 py-2 rounded-full font-bold transition-transform active:scale-90">View Deal</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center w-full px-4 pb-safe-offset-4 h-20">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-600 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="local_offer" style="font-variation-settings: 'FILL' 1;">local_offer</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Offers</span>
+</a>
+</nav>
+</body></html>

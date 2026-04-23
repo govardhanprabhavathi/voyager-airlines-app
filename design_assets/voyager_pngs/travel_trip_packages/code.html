@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voyager | Curated Travel Trips</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e7e8eb",
+                      "primary-container": "#0056d2",
+                      "outline-variant": "#c3c6d6",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#54f67a",
+                      "surface-bright": "#f8f9fc",
+                      "on-primary-fixed-variant": "#0040a1",
+                      "surface-container": "#eceef0",
+                      "secondary-container": "#fe6f42",
+                      "tertiary-fixed-dim": "#3ce36a",
+                      "tertiary-container": "#006e2a",
+                      "background": "#f8f9fc",
+                      "inverse-surface": "#2e3133",
+                      "surface-tint": "#0056d2",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "secondary": "#ac3509",
+                      "tertiary-fixed": "#69ff87",
+                      "on-secondary-fixed-variant": "#852300",
+                      "on-background": "#191c1e",
+                      "on-secondary-container": "#631800",
+                      "primary": "#0040a1",
+                      "tertiary": "#00531e",
+                      "on-secondary-fixed": "#3a0a00",
+                      "on-primary-fixed": "#001847",
+                      "secondary-fixed": "#ffdbd0",
+                      "on-tertiary-fixed": "#002108",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b2c5ff",
+                      "on-tertiary-fixed-variant": "#00531e",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#424654",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-variant": "#e1e2e5",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "surface-dim": "#d8dadd",
+                      "primary-fixed": "#dae2ff",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb59f",
+                      "outline": "#737785",
+                      "surface-container-highest": "#e1e2e5",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#ccd8ff",
+                      "surface": "#f8f9fc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fc;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- Top Navigation -->
+<header class="bg-slate-50/80 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-blue-700">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-black italic text-blue-800 text-lg tracking-tight">Voyager</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-blue-600 transition-colors font-medium" href="#">Home</a>
+<a class="text-blue-700 font-bold transition-colors" href="#">Offers</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors font-medium" href="#">History</a>
+</div>
+<div class="h-10 w-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden active:scale-95 transition-transform">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male traveler with a friendly expression in a bright studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz28UYaKZfWDmcWuTK9ZKXB7-F-sPtg0qz3oOdfrTqCkUNY8iTrEwNx8tuoXpbLn6RdcjHwhDTnQb6dghf5WbYHA0oFsmV-ckLMkGzcET1aii3vCsqHSVpcfZqSJgaIiC2QdljOfruf6WQ33JuDTzf88dnNASGeHR60e1kl_VAqjbBPvJlJFE1YgHvEmgZhq0N0eB4DwCDGtdBXeKCiI-JAhMFV4BAR-8FoQs1NTm0BcbcoSa4-aqpC9V_aDO1xL0MhMBo0P2Tthbs"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-12 relative">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold tracking-widest uppercase text-xs mb-2 block">Curated Journeys</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface leading-tight mb-4">Multi-Destination <br/><span class="text-primary">Travel Packages</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Hand-picked multi-flight adventures designed for the modern explorer. Save on seamless connections across global hubs.</p>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</section>
+<!-- Search & Filter Bar (Tonal Shift) -->
+<div class="mb-10 p-2 bg-surface-container-low rounded-2xl flex flex-wrap gap-2">
+<button class="px-6 py-3 rounded-xl bg-primary text-on-primary font-bold shadow-sm transition-all">All Packages</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">Europe</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">Asia Pacific</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">Americas</button>
+</div>
+<!-- Trips Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Trip Card 1: European Escape (Large Feature) -->
+<div class="lg:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm transition-all hover:shadow-xl border border-outline-variant/10">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="European Escape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning sunset view of the Eiffel Tower across the Seine river with warm cinematic lighting and golden hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2LSmnSn-pNn4Z1guZHv7ApGE6EnMm_GYDzALR04tXJ9zA-Pqfi8FNsgqUKY1zcRBigbofF9n9l0nziloG6cnGMgD00F3mymHBux7bYkXljH5yCsavYBQsmlCJ6NyTXUW_658XHNKaH6w8Onso_oyfARqv7KH07newWPHEO7ZdSfiGn58nqDjQvDpgIFNlBS2xs54O1zCXkkyzVFlpb-xqMe2zxkUnKx5ul6eOU8omo3GIAvcYZ5LeW-YNhkNvomK_OUUtzIDTyqLa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold text-xs uppercase tracking-wider">Best Value</span>
+</div>
+<div class="absolute bottom-8 left-8 text-white">
+<h3 class="text-3xl font-extrabold mb-2">European Escape</h3>
+<div class="flex items-center gap-4 text-white/80">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 12 Days</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="flight">flight</span> 4 Flights</span>
+</div>
+</div>
+</div>
+<div class="p-8 grid md:grid-cols-2 gap-8">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Included Route</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<p class="font-bold text-sm">London (LHR) → Paris (CDG)</p>
+<p class="text-xs text-on-surface-variant">Voyager Air • Business Class</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<p class="font-bold text-sm">Paris (CDG) → Rome (FCO)</p>
+<p class="text-xs text-on-surface-variant">Voyager Air • Premium Economy</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<p class="font-bold text-sm">Rome (FCO) → London (LHR)</p>
+<p class="text-xs text-on-surface-variant">Voyager Air • Business Class</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex flex-col justify-end items-end gap-6">
+<div class="text-right">
+<span class="text-sm text-on-surface-variant line-through block">€1,840.00</span>
+<span class="text-4xl font-black text-on-surface tracking-tighter">€1,299.00</span>
+<p class="text-xs text-on-surface-variant mt-1">Total Package Price / Person</p>
+</div>
+<div class="flex gap-3 w-full">
+<button class="flex-1 px-6 py-4 rounded-xl border border-primary/20 text-primary font-bold hover:bg-primary/5 transition-all">View Details</button>
+<button class="flex-[2] px-6 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">Book Trip</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Trip Card 2: Asian Adventure (Vertical Content) -->
+<div class="lg:col-span-4 group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm flex flex-col border border-outline-variant/10">
+<div class="relative h-64">
+<img alt="Asian Adventure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant night cityscape of Tokyo Shinjuku with neon signs and motion-blurred crowds in a high-tech urban aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBewYN72iyZI1PKANIDSzqXCGzNHWOEPkXt_q_KpLSK1G83jFXdBRdlHu_c4ZJtAbBaZdCQkYa-wBLnLA7FfjjBftJm44OwsI3tYwYgtiBqCr75XhD_OIK9TAO-IWUW7f0P7TJY-DcKtRJQ7KBmBSthX2ue40TIylXpimK7WL_6JPRxjrqiQe_sZu8P6iy0L4ny16AOeV_DzHHg5xN85Qei-VkeA9slkf6a2men_kRrq54Vn8rRC0MQsZRsTLDqzjZuDvNW4oy8GvaZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-extrabold">Asian Adventure</h3>
+<p class="text-sm text-white/70">Tokyo, Seoul &amp; Osaka</p>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="stars">stars</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Premium Collection</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Explore the pulsing heart of East Asia with direct hub-to-hub transfers and priority boarding.</p>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center pb-4 border-b border-surface-container">
+<span class="text-sm font-medium">Duration</span>
+<span class="text-sm font-bold">15 Days</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-container">
+<span class="text-sm font-medium">Total Flights</span>
+<span class="text-sm font-bold">3 Direct</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Stays Included</span>
+<span class="text-sm font-bold">5-Star Select</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline justify-between mb-4">
+<span class="text-xs font-bold text-on-surface-variant">Price From</span>
+<span class="text-2xl font-black text-on-surface">$2,450</span>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-high text-on-surface font-bold hover:bg-primary hover:text-white transition-all">View Itinerary</button>
+</div>
+</div>
+</div>
+<!-- Trip Card 3: Tropical Discovery (Minimalist) -->
+<div class="lg:col-span-12 group bg-surface-container-low rounded-[2rem] overflow-hidden flex flex-col md:flex-row border border-outline-variant/10">
+<div class="md:w-1/3 h-72 md:h-auto">
+<img alt="Tropical Discovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Overwater bungalows in a crystal clear turquoise lagoon in the Maldives with white sand beach and tropical palm trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI2Jo_0S8jK-ym4RmCGho8e1JyWae_V2iIsOiiZogKrpi-31z57HuqI3cU8oKxrbSWUt2DcTNvNJz5dluEZ8EPEITRiqfz_U1BMPjd8v0SMnLDUkdim_oHhLT6t4xUH1_IZNsjRcEOvOl0n87xwIy7fGJbdayRBtpgUXUYXA--Oh1OzJ2AhqCTW892-w76RXK9Vw4NB-ZfD83Ls-QWNS2H8VuWXWKpiqIQUXfs7lEIRmanCNzdrkEp_-CXIHEGGGw5lAVtSQX3xRPd"/>
+</div>
+<div class="flex-1 p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="max-w-md text-center md:text-left">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2 block">Island Hopping</span>
+<h3 class="text-3xl font-black mb-4">Tropical Discovery</h3>
+<p class="text-on-surface-variant">Multi-leg journey through the Maldives, Bali, and Fiji. Includes luxury sea-plane transfers between island clusters.</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-4 min-w-[200px]">
+<div class="text-center md:text-right">
+<span class="text-xs font-bold text-on-surface-variant uppercase mb-1 block">Start From</span>
+<span class="text-4xl font-black text-primary">$3,800.00</span>
+</div>
+<button class="px-10 py-4 rounded-xl bg-primary text-white font-bold hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95">Inquire Now</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden bg-slate-50/80 backdrop-blur-xl fixed bottom-0 w-full z-50 rounded-t-3xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] h-20 flex justify-around items-center px-4 pb-safe-offset-4">
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">History</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="local_offer" style="font-variation-settings: 'FILL' 1;">local_offer</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Offers</span>
+</button>
+</nav>
+<!-- FAB (Suppressed on this transactional-adjacent screen per rules, but included if needed for 'Quick Help' context as an exception) -->
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voyager | Sign In</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .headline-font {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e7e8eb",
+                      "primary-container": "#0056d2",
+                      "outline-variant": "#c3c6d6",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#54f67a",
+                      "surface-bright": "#f8f9fc",
+                      "on-primary-fixed-variant": "#0040a1",
+                      "surface-container": "#eceef0",
+                      "secondary-container": "#fe6f42",
+                      "tertiary-fixed-dim": "#3ce36a",
+                      "tertiary-container": "#006e2a",
+                      "background": "#f8f9fc",
+                      "inverse-surface": "#2e3133",
+                      "surface-tint": "#0056d2",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "secondary": "#ac3509",
+                      "tertiary-fixed": "#69ff87",
+                      "on-secondary-fixed-variant": "#852300",
+                      "on-background": "#191c1e",
+                      "on-secondary-container": "#631800",
+                      "primary": "#0040a1",
+                      "tertiary": "#00531e",
+                      "on-secondary-fixed": "#3a0a00",
+                      "on-primary-fixed": "#001847",
+                      "secondary-fixed": "#ffdbd0",
+                      "on-tertiary-fixed": "#002108",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b2c5ff",
+                      "on-tertiary-fixed-variant": "#00531e",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#424654",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-variant": "#e1e2e5",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "surface-dim": "#d8dadd",
+                      "primary-fixed": "#dae2ff",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb59f",
+                      "outline": "#737785",
+                      "surface-container-highest": "#e1e2e5",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#ccd8ff",
+                      "surface": "#f8f9fc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface flex min-h-screen">
+<!-- Left Content: Login Form Canvas -->
+<main class="flex-1 flex flex-col justify-center items-center px-6 lg:px-24 py-12 relative z-10">
+<!-- Header Brand (From JSON Context) -->
+<header class="fixed top-0 left-0 w-full lg:w-1/2 flex justify-between items-center px-8 h-20 z-20">
+<div class="font-manrope font-black italic text-blue-800 text-2xl tracking-tight">Voyager</div>
+</header>
+<div class="w-full max-w-md space-y-8">
+<div class="space-y-3">
+<h1 class="font-headline font-extrabold text-4xl lg:text-5xl text-primary tracking-tight">Welcome back</h1>
+<p class="text-on-surface-variant font-medium">Please enter your details to access your journey.</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<!-- Email Input Group -->
+<div class="space-y-2">
+<label class="font-label text-sm font-semibold text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline font-medium" id="email" name="email" placeholder="alex@voyager.com" type="email"/>
+</div>
+</div>
+<!-- Password Input Group -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="font-label text-sm font-semibold text-on-surface-variant" for="password">Password</label>
+<a class="text-sm font-bold text-primary hover:text-primary-container transition-colors" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline font-medium" id="password" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 right-4 flex items-center text-outline cursor-pointer hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</div>
+</div>
+</div>
+<!-- Login CTA -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-xl shadow-lg shadow-primary/10 hover:shadow-primary/25 active:scale-[0.98] transition-all duration-300" type="submit">
+                    Sign In
+                </button>
+</form>
+<!-- Social Login Section -->
+<div class="space-y-6">
+<div class="relative flex items-center">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-4 text-outline text-xs font-bold uppercase tracking-widest">Or continue with</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low rounded-xl font-label font-bold text-sm text-on-surface hover:bg-surface-container transition-colors active:scale-95 transition-transform">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google icon on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLLe8sGy_7-dEl64JqA1Ptq55YRwXdE5tOSkwSx69vDkhurK5XR1z_5SAYTZPKhQxuWG4KFpk7xo-tR5N4nG-UWiij3YeMx1NBGfhxrHun3Q1mwTz7NM-HhDDpj53vd16x9s03AhLzCuRiINgwZpHGIXI8V6kJgiF7aLcBpjS5gLUFk-KXQj1mzD1Cok6yU2H2Oz8zldgtUBE_bym2z5YiIBEWmPMSqK-i41Bo0anuwR_HyjWVHAKtFLCw3JM6EaL-1-WXnQuf-tm-"/>
+                        Google
+                    </button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low rounded-xl font-label font-bold text-sm text-on-surface hover:bg-surface-container transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-on-surface" style="font-variation-settings: 'FILL' 1;">ios</span>
+                        Apple
+                    </button>
+</div>
+</div>
+<p class="text-center font-label text-sm font-medium text-on-surface-variant">
+                Don't have an account? 
+                <a class="text-secondary font-bold hover:underline ml-1" href="#">Create account</a>
+</p>
+</div>
+</main>
+<!-- Right Side: Hero Visual -->
+<aside class="hidden lg:block lg:w-1/2 relative overflow-hidden">
+<!-- Hero Image Canvas -->
+<div class="absolute inset-0 z-0">
+<img alt="Voyager Hero Airplane" class="w-full h-full object-cover" data-alt="Modern wide-body commercial airplane soaring through a vibrant sunset sky with hues of deep blue, orange, and soft purple clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx4wjYAaZdJj254zovueB39ZaDgJsb8q9enPH2N4p8rkk3CdfJshGDREr_9Ak6_QfHCtw-JyY_cTYb9g4dDPDSqnKcAknh2KZ0rbHeBpZkfWCjmn-qv50O5JE7BpQ7V4VX8KSTs76i9mmj-FGqqMxU8cy5A1M8lEfAUSFSsdSiNGPwSxcKPjE2mgmtEAfM-Q5QnSv0yHNZvvZCWkqJVV76K6TYJTws5ghRQkU19D3VhEVsD-qC4Z241ZInXdInaQNkalwBttXjHKa-"/>
+<!-- Branding Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<!-- Glassmorphism Floating Card (Editorial Detail) -->
+<div class="absolute bottom-16 right-16 left-16 p-8 backdrop-blur-xl bg-white/10 rounded-3xl border border-white/20 shadow-2xl">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[20px]">stars</span>
+</div>
+<span class="font-headline font-bold text-white tracking-wide uppercase text-xs">The Digital Concierge Experience</span>
+</div>
+<h2 class="font-headline font-bold text-3xl text-white leading-tight">Elevating your travel from takeoff to landing.</h2>
+<div class="flex gap-4 mt-2">
+<div class="flex -space-x-3">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white/30" data-alt="Portrait of a smiling young professional man outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx_X8rmn0Raf9SCxcoVf4W4BpnS3h8lugthuy1Mz-oWwFSGKOi5QJQunW77oS3KcU9Ii06jSlh-mnR1zqLJcfqolERfaksW9HRjy56CfQpu25LH8meW9gZ-0GD_XGPpX0151IuWzW3k-4NiHEltoIML9TQIL7PrUJ7_oQ7uMfibtV17OdmTvzCYYs8RaPjLgezp9BYgm26H8Z2a0MnP9XYY1xR2PbfvQKR7slfQ4jUmN48nECFvv997eG_ai9PheEijAG-5GiObmPA"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white/30" data-alt="Portrait of a stylish woman with warm smile against blurred city background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCBgvIcvqwRJYZRqYpj_QXCdyfuWOnlJgtlzVchihPuqy8XV42DDipRfg22WuVBdciC-JFTPEBbY6wKlObF8jBbCW7YvLaF4AuR6QPwzxv_g51McdBSi6XwOQkKBN0vFiV4CN4DEfqIoVADtGkXWrpyTO6b1Ku0fvm_60x-Tn0b0Op2v3qGVVqoW44BkAQQVEgZlS2HumS9jDZ4Y6HhNA3INUi3rZeGWYNVrSe-uBUNPbbRVRLj5KPBPvoCgtz-fqC-F1l2bd87tBu"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white/30" data-alt="Portrait of a friendly man wearing casual attire in bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqMse0_22uSigAJcxBeFcjAZQUlL65t6Av0kR3nx8XJPnKlUMPtQsQXN0P_RBfpXTt-xNJF3A4I7ZsbmjQ7edvPC1H2rbTT0Cs3SjiF3Dmfm2Z-2RKwzA4idcbzl9ovRupcx5hSM9BDWr1jVgjSWci_8V9ZQw6VqQ-qA2pNdhg4fOG8Yx_1jFaUZO_P5KBsUlLSUiwAaKK_znht2Y08uajfBn7976fDfI9zWp8IBDBL0f-PdiFVKieu45qW-ZeO7cg6cTC1Et_PVh2"/>
+</div>
+<span class="text-white/80 text-sm font-medium self-center">+ 24k Voyager members</span>
+</div>
+</div>
+</div>
+</aside>
+</body></html>

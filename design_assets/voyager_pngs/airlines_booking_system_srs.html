@@ -1,0 +1,124 @@
+SOFTWARE REQUIREMENTS SPECIFICATION (SRS)
+Airlines Booking System Mobile Application
+1. Introduction
+1.1 Purpose
+The purpose of this document is to provide a detailed description of the requirements for the Airlines Booking System Mobile Application. This application is developed using Kotlin on the Android platform as part of the Mobile Application Development course.
+The system enables users to search flights, book tickets, find cheaper travel options, and receive cost optimization suggestions.
+1.2 Scope
+The Airlines Booking System is a mobile-based application designed to simulate airline ticket booking services.
+The system will:
+Allow users to search and book flights
+Provide cheaper flight suggestions during low-demand periods
+Suggest cost-effective connecting journeys
+Offer travel trip packages (multi-flight journeys)
+Provide booking offers such as cashback
+The application will work offline using a local database and is intended for academic purposes only.
+1.3 Definitions, Acronyms, and Abbreviations
+TermDescriptionSRSSoftware Requirements SpecificationUIUser InterfaceDBDatabaseCRUDCreate, Read, Update, DeleteAPKAndroid Application Package
+2. Overall Description
+2.1 Product Perspective
+This is a standalone Android mobile application. It does not depend on any external servers or real-time airline APIs.
+2.2 Product Functions
+The main functions of the system include:
+Flight search and booking
+Display of cheapest flights
+Cost optimization via connecting routes
+Travel trip suggestions
+Booking history management
+Offers and cashback system
+2.3 User Classes and Characteristics
+User TypeDescriptionGeneral UserCan search, view, and book flightsAdmin (Optional)Can manage flight data (optional for project)
+2.4 Operating Environment
+Platform: Android OS
+Development Tool: Android Studio
+Language: Kotlin
+Database: Room (SQLite)
+2.5 Design Constraints
+Offline application (no internet dependency)
+Predefined dataset for flights and routes
+No real-time booking or payment gateway
+2.6 Assumptions and Dependencies
+Users have basic knowledge of using mobile apps
+Flight data is preloaded into the system
+No external APIs are used
+3. System Features
+3.1 Flight Booking System
+Description:
+Allows users to search and book flights.
+Functional Requirements:
+User enters source, destination, and date
+System displays available flights
+User selects a flight
+Booking confirmation is generated
+3.2 Cheapest Flight Suggestions
+Description:
+Displays flights with lower prices during low-demand periods.
+Functional Requirements:
+System filters flights based on price or demand
+Displays discounted flights in a separate section
+3.3 Cost Optimization (Connecting Flights)
+Description:
+Suggests cheaper routes using intermediate stops.
+Functional Requirements:
+Compare direct and connecting flight costs
+Suggest cheaper route if available
+Display savings to the user
+3.4 Travel Trip Packages
+Description:
+Provides multi-flight travel plans.
+Functional Requirements:
+Display predefined travel packages
+Show total cost and route details
+Allow booking of complete trip
+3.5 Offers and Cashback System
+Description:
+Provides promotional offers for users.
+Functional Requirements:
+Display available offers
+Apply discounts during booking
+Show cashback for pre-booking
+3.6 Booking History
+Description:
+Stores previous bookings.
+Functional Requirements:
+Save booking details in database
+Display history to user
+4. External Interface Requirements
+4.1 User Interface
+The application will have the following screens:
+Login / Signup Screen
+Home Screen
+Flight Search Screen
+Flight Results Screen
+Cheapest Flights Screen
+Travel Trips Screen
+Booking Confirmation Screen
+Booking History Screen
+4.2 Hardware Interface
+Android smartphone or emulator
+4.3 Software Interface
+Android OS
+Room Database (SQLite)
+5. Non-Functional Requirements
+5.1 Performance Requirements
+Fast response time for search and booking
+Efficient data retrieval from local database
+5.2 Usability Requirements
+Simple and user-friendly interface
+Easy navigation between screens
+5.3 Reliability Requirements
+System should handle invalid inputs gracefully
+No crashes during normal usage
+5.4 Security Requirements
+Basic validation for user inputs
+Secure storage of user data locally
+5.5 Maintainability Requirements
+Modular code structure
+Easy to update flight data
+6. Future Enhancements
+Integration with real-time airline APIs
+Online payment gateway
+Seat selection system
+User authentication with cloud database
+7. Conclusion
+The Airlines Booking System Mobile Application is designed to provide a simplified and efficient solution for flight booking. The system includes innovative features such as cost optimization, cheapest flight suggestions, and travel trip packages. It serves as a practical implementation of mobile application development concepts using Kotlin.
